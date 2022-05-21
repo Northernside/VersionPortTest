@@ -5,14 +5,18 @@ import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.*;
 
 public class VenadeScoreboard {
-    public String displayName;
+    private String displayName;
 
-    ScoreboardManager manager = Bukkit.getScoreboardManager();
-    Scoreboard board = manager.getNewScoreboard();
-    Objective objective = board.registerNewObjective("test", "dummy");
+    private ScoreboardManager manager;
+    private Scoreboard board;
+    private Objective objective;
 
     public VenadeScoreboard(String displayName) {
         this.displayName = displayName;
+        this.manager = Bukkit.getScoreboardManager();
+        this.board = manager.getNewScoreboard();
+        this.objective = board.registerNewObjective("test", "dummy");
+
         objective.setDisplaySlot(DisplaySlot.SIDEBAR);
         objective.setDisplayName(displayName);
     }
@@ -24,5 +28,9 @@ public class VenadeScoreboard {
 
     public void updateScoreboard(Player player) {
         player.setScoreboard(board);
+    }
+
+    public Scoreboard getBoard() {
+        return board;
     }
 }

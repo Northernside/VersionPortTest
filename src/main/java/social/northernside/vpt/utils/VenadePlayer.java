@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 public class VenadePlayer {
     private VenadeScoreboard scoreboard;
     private Player player;
-    private int sneakCount = 0;
+    private int sneakCount;
 
     public VenadePlayer(Player player) {
         this.player = player;
@@ -28,7 +28,7 @@ public class VenadePlayer {
     }
 
     public void incrementSneakCount() {
-        this.scoreboard.board.resetScores("Sneak Counter: " + sneakCount);
+        this.scoreboard.getBoard().resetScores("Sneak Counter: " + sneakCount);
         this.sneakCount += 1;
         this.scoreboard.addScore("Sneak Counter: " + sneakCount, 1);
     }
