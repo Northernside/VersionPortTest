@@ -14,7 +14,6 @@ public class VenadePlayer {
     }
 
     public void spawn() {
-        VenadePlayer venadePlayer = new VenadePlayer(player);
         updateScoreboard();
         player.setPlayerListHeaderFooter("Header", "Footer");
         player.sendTitle("Title", "Subtitle", 10, 40, 10);
