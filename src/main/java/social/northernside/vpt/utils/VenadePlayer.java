@@ -30,7 +30,7 @@ public class VenadePlayer {
     }
 
     public void incrementSneakCount() {
-        this.scoreboard.board.resetScores("Sneak Counter: " + sneakCount);
+        this.scoreboard.getBoard().resetScores("Sneak Counter: " + sneakCount);
         this.sneakCount += 1;
         this.scoreboard.addScore("Sneak Counter: " + sneakCount, 1);
     }
