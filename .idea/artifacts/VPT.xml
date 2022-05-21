@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="VPT">
+    <output-path>$PROJECT_DIR$/out/artifacts/VPT</output-path>
+    <root id="archive" name="VPT.jar">
+      <element id="module-output" name="VersionPortTest" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,4 @@
+name: VersionPortTest
+version: 1.0
+author: Northernside
+main: social.northernside.vpt.VersionPortTest
