@@ -14,12 +14,11 @@ public class VenadePlayer {
     }
 
     public void spawn() {
-        VenadePlayer venadePlayer = new VenadePlayer(player);
         updateScoreboard();
         VenadeTablist tablist = new VenadeTablist("Header", "Footer");
         VenadeTitle title = new VenadeTitle("Title", "Subtitle", 10, 40, 10);
-        tablist.setTab(venadePlayer);
-        title.sendTitle(venadePlayer);
+        tablist.setTab(this);
+        title.sendTitle(this);
     }
 
     public Player getBukkitPlayer() {
